@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>天使在人间 荣耀每一天</title>
+    <!--导入需要的css文件-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/css.css"/>
+    <!--计算rem-->
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+    </script>
+    <style>
+        /*清除默认样式*/
+        html {
+            font-size: 100px; /*640设计稿中:1REM=100PX*/
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            z-index: -3;
+            -webkit-user-select: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            color: #000;
+            background: #FFF;
+        }
+
+        a,
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        button,
+        textarea,
+        select,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        fieldset,
+        img {
+            border: 0;
+        }
+
+        address,
+        button,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        input,
+        optgroup,
+        option,
+        select,
+        strong,
+        textarea,
+        th,
+        var {
+            font: inherit;
+        }
+
+        del,
+        ins {
+            text-decoration: none;
+        }
+
+        ul > li {
+            list-style: none;
+        }
+
+        caption,
+        th {
+            text-align: left;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+            font-weight: normal;
+        }
+
+        q:before,
+        q:after {
+            content: '';
+        }
+
+        abbr,
+        acronym {
+            border: 0;
+            font-variant: normal;
+        }
+
+        sup {
+            vertical-align: top;
+        }
+
+        sub {
+            vertical-align: bottom;
+        }
+
+        /*because legend doesn't inherit in IE */
+        legend {
+            color: #000;
+        }
+
+        button::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+
+        button {
+            *overflow: visible;
+        }
+
+        strong, b {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        /*
+        *    Helpers section
+        *
+        */
+        .spring {
+            display: -moz-inline-box;
+            display: inline-block;
+            *zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        .spring-text {
+            display: -moz-inline-box;
+            display: inline-block;
+            *zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+        }
+
+        .clear {
+            display: block;
+            float: none;
+            clear: both;
+        }
+
+        .clear-inline {
+            display: -moz-inline-box;
+            display: inline-block;
+            *zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        section,
+        nav,
+        aside,
+        article,
+        header,
+        footer {
+            display: block;
+        }
+
+        /**
+        *
+        */
+        .pre-text { /* root path for pre-edited style */
+
+        }
+
+        .pre-text h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .pre-text h2 {
+            font-weight: bold;
+            font-size: 1.7em;
+        }
+
+        .pre-text h3 {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .pre-text h4 {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .pre-text h5 {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .pre-text ul > li {
+            list-style: disc inside;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        a {
+            text-decoration: none !important;
+            /*color: #333 !important;*/
+
+        }
+
+        a:focus {
+            outline: none !important;
+        }
+        /*页面样式*/
+        @font-face {
+            font-family: "HYYouRanTiJ";
+            src: url("images/HYYouRanTiJ Regular.TTF");
+        }
+        .title{
+            margin: 0.37rem auto 0;
+            width: 4.9rem;
+            height: 0.7rem;
+            line-height: 0.7rem;
+            text-align: center;
+            background-image: url("images/title.png");
+            /*background-repeat: no-repeat;*/
+            background-size: 100% 100%;
+            /*background-position: top left;*/
+            font-size: 0.2rem;
+            font-family: "HYYouRanTiJ";
+            color: #2a2a2a;
+        }
+        .title span{
+            color: #81a141;
+        }
+        .des{
+            margin: 0.35rem auto 0;
+            padding-top: .4rem;
+            width: 4.7rem;
+            height: .9rem;
+            line-height: 0.4rem;
+            text-align: center;
+            background-image: url("images/border.jpg");
+            background-size: 100% 100%;
+            font-size: .2rem;
+            color: #000;
+        }
+        .img{
+            display:  block;
+            width: 4.7rem;
+            margin: .35rem auto 0;
+            border: .1rem solid #fff;
+            box-shadow: 0 0 0 .01rem rgba(0,0,0,.2);
+        }
+        .article{
+            position: relative;
+            padding-left: .15rem;
+            padding-right: .15rem;
+            padding-top: .25rem;
+            margin: .8rem auto 0;
+            width: 4.7rem;
+            background-color: #f6f6f6;
+            border: .1rem solid #fff;
+            box-shadow: 0 0 0 .01rem rgba(0,0,0,.2);
+            font-size: .2rem;
+        }
+        .article .list{
+            border-bottom: .01rem dotted #7d7d7d;
+            padding-bottom: .25rem;
+        }
+        .article .content-title{
+            position: absolute;
+            top: -0.56rem;
+            width: 3.4rem;
+            height: .56rem;
+        }
+        .article .index{
+            color: #2a8506;
+        }
+        .article .chinese{
+            margin-top: .15rem;
+            font-weight: bold;
+        }
+        .article .english{
+            margin-top: .15rem;
+            color: #7b7b7b;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    点击上方
+    <span>蓝色文字</span>
+    关注公众号
+</div>
+<div class="des">
+    <div>收割的时候就是世界的末了,收割的人就是天使</div>
+    <div>[太13:39 ]</div>
+</div>
+<img class="img" src="https://mmbiz.qpic.cn/mmbiz_jpg/MRuf86rjVFibUwS0wmjiaB3w6WeBmaxB3qrOO8xIYVhyJ6ic8vOrpZWKnOkZCr18dZLFao3h0DO4icCDeAfYd1JFJQ/0?wx_fmt=jpeg" alt="">
+<div class="article">
+    <div class="list">
+    <img class="content-title" src="images/content-title.png" alt="">
+    <div class="index">【诗78:1】[和合本]</div>
+    <div class="chinese">我的民哪，你们要留心听我的训诲，侧耳听我口中的话。</div>
+    <div class="english">[KJV] Maschil of Asaph. Give ear, O my people, to my law: incline your ears to the words of my mouth.Maschil…: or, A Psalm for Asaph to give instruction</div>
+    </div>
+    <div class="list">
+        <img class="content-title" src="images/content-title.png" alt="">
+        <div class="index">【诗78:1】[和合本]</div>
+        <div class="chinese">我的民哪，你们要留心听我的训诲，侧耳听我口中的话。</div>
+        <div class="english">[KJV] Maschil of Asaph. Give ear, O my people, to my law: incline your ears to the words of my mouth.Maschil…: or, A Psalm for Asaph to give instruction</div>
+    </div>
+    <div class="list">
+        <img class="content-title" src="images/content-title.png" alt="">
+        <div class="index">【诗78:1】[和合本]</div>
+        <div class="chinese">我的民哪，你们要留心听我的训诲，侧耳听我口中的话。</div>
+        <div class="english">[KJV] Maschil of Asaph. Give ear, O my people, to my law: incline your ears to the words of my mouth.Maschil…: or, A Psalm for Asaph to give instruction</div>
+    </div>
+    <div class="list">
+        <img class="content-title" src="images/content-title.png" alt="">
+        <div class="index">【诗78:1】[和合本]</div>
+        <div class="chinese">我的民哪，你们要留心听我的训诲，侧耳听我口中的话。</div>
+        <div class="english">[KJV] Maschil of Asaph. Give ear, O my people, to my law: incline your ears to the words of my mouth.Maschil…: or, A Psalm for Asaph to give instruction</div>
+    </div>
+</div>
+</body>
+</html>
